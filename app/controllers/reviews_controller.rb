@@ -11,7 +11,7 @@ class ReviewsController < ApplicationController
     @review.play_id = @play.id
     @review.user_id = current_user.id
 
-    if @review.sav
+    if @review.save
       redirect_to play_path(@play)
     else
       render 'new'
